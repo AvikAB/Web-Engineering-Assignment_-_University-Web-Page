@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Prime University </title>
+  <!-- Bootstrap CDN: -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="#">About ▾</a>
+          <ul class="dropdMenu">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Vision & Mission</a></li>
+            <li><a href="#">News & Events</a></li>
+            <li><a href="#">Achievements</a></li>
+            <li><a href="#">The Chancellor</a></li>
+            <li><a href="#">The Vice-chancellor</a></li>
+            <li><a href="#">Former Vice-chancellors</a></li>
+            <li><a href="#">Location, Maps & Direction</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Academics ▾</a>
+          <ul class="dropdMenu">
+            <li><a href="#">Faculty</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">Available Courses</a></li>
+            <li><a href="#">Transcript & Certificates</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Admission ▾</a>
+          <ul class="dropdMenu">
+            <li><a href="#">Undergraduate</a></li>
+            <li><a href="#">Postgraduate</a></li>
+            <li><a href="#">Diploma, Evening & Other Courses</a></li>
+            <li><a href="#">Credit Transfers</a></li>
+            <li><a href="#">Scholarship Opportunities</a></li>
+            <li><a href="#">International Students</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact Us!</a></li>
+      </ul>
+      <div class="logo">
+        <img src="https://www.primeuniversity.edu.bd/prime/assets/images/logo-dark.png" alt="Prime University Logo">
+      </div>
+    </nav>
+  </header>
+
+  <!-- Slider Section -->
+  <div id="slider">
+    <figure>
+      <img src="https://www.primeuniversity.edu.bd/image/home_slider/1655263927.jpg" alt="slide1">
+      <img src="https://media.licdn.com/dms/image/v2/C511BAQHf4EpwVJoYNg/company-background_10000/company-background_10000/0/1584409719245/prime_university_cover?e=1746453600&v=beta&t=xl-yjtCLmEnG9v3mdW309axtcBKduhg8aqD_NNRLaXs" alt="slide2">
+      <img src="https://www.primeuniversity.edu.bd/image/home_slider/1655264359.jpg" alt="slide3">
+    </figure>
+    <div class="slidertext">
+      <h1>Welcome To Prime University</h1>
+      <p>A Home for Rendering Prime Knowledge</p>
+    </div>
+  </div>
+<hr>
+  <!-- Registration Form -->
+  <div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Student Registration Form</h2>
+    <form id="registrationForm" novalidate>
+      <div class="mb-3">
+        <label for="studentName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="studentName" required>
+        <div class="invalid-feedback">Please enter your name.</div>
+      </div>
+      <div class="mb-3">
+        <label for="studentId" class="form-label">Student ID</label>
+        <input type="text" class="form-control" id="studentId" required>
+        <div class="invalid-feedback">Please enter your student ID.</div>
+      </div>
+      <div class="mb-3">
+        <label for="department" class="form-label">Department</label>
+        <select class="form-select" id="department" required>
+          <option value="">Choose...</option>
+          <option value="CSE">CSE</option>
+          <option value="EEE">EEE</option>
+          <option value="CE">CE</option>
+          <option value="LAW">Law</option>
+          <option value="BBA">BBA</option>
+          <option value="Bangla">Bangla</option>
+          <option value="English">English</option>
+          <option value="Education">Education</option>
+          <option value="ETE">ETE</option>
+        </select>
+        <div class="invalid-feedback">Please select a department.</div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" required>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label d-block">Gender</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="other" value="Other">
+          <label class="form-check-label" for="other">Other</label>
+        </div>
+        <div class="invalid-feedback d-block" id="genderError" style="display:none;">Please select a gender.</div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>

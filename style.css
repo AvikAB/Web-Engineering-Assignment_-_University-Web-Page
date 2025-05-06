@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar section */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(30, 141, 205);
+    border-radius: 10px;
+    padding: 0 20px;
+    position: relative;
+  }
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    background: rgb(30, 141, 205);
+  }
+  .navbar li {
+    margin: 10px 10px;
+  }
+  .navbar li a {
+    color: rgb(243, 237, 237);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+  }
+  .navbar li a:hover {
+    color: rgb(23, 1, 1);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
+  .logo img {
+    height: 60px;
+  }
+  
+  /* Dropdown Style */
+  .dropdown {
+    position: relative;
+  }
+  .dropdMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(30, 141, 205);
+    border-radius: 0 0 5px 5px;
+    list-style: none;
+    min-width: 220px;
+    z-index: 999;
+    padding: 5px 0;
+    margin: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+  }
+  .dropdown:hover .dropdMenu {
+    display: block;
+    opacity: 1;
+  }
+  .dropdMenu li a {
+    padding: 12px 20px;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+  }
+  .dropdMenu li a:hover {
+    background-color: rgb(23, 108, 160);
+    padding-left: 25px;
+  }
+  
+  /* Slider section */
+  #slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 550px;
+  }
+  #slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
+  }
+  #slider figure {
+    position: relative;
+    width: 300%;
+    margin: 0;
+    left: 0;
+    height: 100%;
+    animation: 15s slider infinite;
+  }
+  #slider figure img {
+    float: left;
+    width: 33.3333%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @keyframes slider {
+    0%, 20% { left: 0%; }
+    33%, 53% { left: -100%; }
+    66%, 86% { left: -200%; }
+    100% { left: 0%; }
+  }
+  .slidertext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: white;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  .slidertext h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  }
+  .slidertext p {
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
